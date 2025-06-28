@@ -1,0 +1,11 @@
+target/
+!target/*.jar
+!target/classes/
+!target/maven-archiver/
+!target/maven-status/
+!target/todo-api-1.0.0.jar
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore 

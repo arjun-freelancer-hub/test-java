@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: todo-api
+    env: java
+    plan: free
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/todo-api-1.0.0.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: PORT
+        value: 8080
+    healthCheckPath: /api/todos/health
+
+databases:
+  - name: todo-db
+    databaseName: tododb
+    user: todouser
+    plan: free 

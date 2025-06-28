@@ -1,7 +1,7 @@
 services:
   - type: web
     name: todo-api
-    env: java
+    runtime: java
     plan: free
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/todo-api-1.0.0.jar
